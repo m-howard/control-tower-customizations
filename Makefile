@@ -12,7 +12,7 @@ build: clean
 
 .PHONY: deploy
 deploy:
-	aws s3 cp $(DIST_DIR)$(ARTIFACT_NAME) s3://$(ARTIFACT_NAME)
+	aws s3 cp $(DIST_DIR)$(ARTIFACT_NAME) s3://$(S3_BUCKET)/$(ARTIFACT_NAME)
 
 .PHONY: clean
 clean:
