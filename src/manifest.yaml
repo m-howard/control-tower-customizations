@@ -1,0 +1,41 @@
+---
+# https://s3.amazonaws.com/solutions-reference/customizations-for-aws-control-tower/latest/customizations-for-aws-control-tower-developer-guide.pdf
+#Default region for deploying Custom Control Tower: Code Pipeline, Step functions, Lambda, SSM parameters, and StackSets
+region: us-east-1
+version: 2020-01-01
+
+# Control Tower Custom Service Control Policies
+organization_policies: []
+  # - name: hipaa-services
+  #   description: To prevent from using services that are not HIPAA certified
+  #   policy_file: policies/hipaa-services.json
+  #   apply_to_accounts_in_ou:
+  #     - Test
+  # - name: location-limit
+  #   description: To prevent from users from accessing outside the VPN and using the designated region
+  #   policy_file: policies/location-limit.json
+  #   apply_to_accounts_in_ou:
+  #     - Test
+  # - name: custom-preventive-guardrails
+  #   description: To prevent from deleting or disabling resources in member accounts
+  #   policy_file: policies/preventive-guardrails.json
+  #   apply_to_accounts_in_ou:
+  #     - Test
+
+# Control Tower Custom CloudFormation Resources
+cloudformation_resources: []
+  # Enable Security Hub master account
+  # Enable Security Hub member account & accept invitation
+  # Enable CIS Section 1 Benchmark remediation
+  # Enable CIS Section 2 Benchmark remediation
+  # Enable CIS Section 3 Benchmark remediation
+  # Enable CIS Section 4 Benchmark remediation
+  # Provision basic uneditable VPC
+  
+  # - name: CISSection1BenchmarkRemediation
+  #   template_file: templates/cis-1-benchmarks-remediation.template
+  #   deploy_method: stack_set
+  #   regions:
+  #     - us-west-2
+  #   deploy_to_ou:
+  #     - Test
